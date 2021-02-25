@@ -1,8 +1,10 @@
 
 const mysql = require('mysql');
 
+
 const mysqlConnection = mysql.createConnection({
-    host: 'localhost',
+    // host: 'localhost',
+    host: process.env.DB_HOST,
     user: 'root',
     password: '',
     database: 'employee',
@@ -15,7 +17,10 @@ mysqlConnection.connect(function (err) {
     return;
     } else {
         console.log('db is connected');
-}
+    }
 });
 
+
 module.exports = mysqlConnection;
+// module.exports = jwtSecret;
+
