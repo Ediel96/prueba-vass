@@ -15,7 +15,7 @@ const checkToken = (req, res, next) =>{
             payload = jwt.decode(token, jwtSecret)
         }catch (err){
             return res.json({
-                error:'Otken Invalido'
+                error:'token Invalido'
             });
         };
 
