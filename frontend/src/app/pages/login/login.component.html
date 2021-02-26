@@ -1,0 +1,42 @@
+<div class="row justify-content-center">
+    <div class="col-xl-10 col-lg-12 col-md-9">
+      <div class="card o-hidden border-0 shadow-lg my-5">
+        <div class="card-body p-0">
+          <!-- Nested Row within Card Body -->
+          <div class="row cont-he">
+            <div class="col-lg-6 d-none d-lg-block bg-login-image imgbagoun"></div>
+            <div class="col-lg-6">
+              <div class="p-5">
+                <div class="text-center">
+                  <h1 class="h4 text-gray-900 mb-4">Bienvenidos !</h1>
+                </div>
+                <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="user">
+                  <div class="form-group">
+                    <input type="email" formControlName="email" name="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                        <div *ngIf="f.email.errors.required">email required</div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <input type="password" formControlName="password" name="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                        <div *ngIf="f.password.errors.required">password required</div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="custom-control custom-checkbox small">
+                      <input type="checkbox" class="custom-control-input" id="customCheck">
+                      <label class="custom-control-label" for="customCheck">Remember Me</label>
+                      <br>
+                      <a [routerLink]="['/register']">Registrarse</a>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary btn-user btn-block"> Login </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
