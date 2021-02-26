@@ -20,7 +20,6 @@ const getEmail = (email) => {
     })
 }
 
-
 module.exports = {
     getAll: getAll,
     getEmail: getEmail
