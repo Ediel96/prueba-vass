@@ -39,7 +39,6 @@ export class AuthService {
 
   getCurrentUser(){
     let user_string = localStorage.getItem("token_user");
-    // user_string = JSON.parse(user_string)
     console.log(user_string)
     if (localStorage.getItem("token_user") != null) {
       return true;
