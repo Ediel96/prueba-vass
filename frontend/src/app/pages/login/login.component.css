@@ -9,3 +9,19 @@
   }
   
   .form-group.last { margin-bottom:0px; }
+
+
+  .row.justify-content-center {
+    margin: 22vh;
+  }
+
+
+  .text-main{
+    font-size: 2em;
+  }
+
+@media (max-width: 800px) {
+  .row.justify-content-center {
+    margin: 5vh;
+  }
+}

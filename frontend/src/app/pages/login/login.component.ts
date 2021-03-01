@@ -21,6 +21,9 @@ export class LoginComponent implements OnInit {
         email: ['', [Validators.required, Validators.email]],
         password: ['', [Validators.required]],
     });
+
+    this.loginServ.getCurrentUser()
+    console.log('que paso')
   }
 
   get f() { return this.registerForm.controls; }
@@ -33,13 +36,16 @@ export class LoginComponent implements OnInit {
     }
 
     this.loginServ.getLogin(this.registerForm.value).
-      subscribe( res => {
-        if(res['error'] != null){
-            this.router.navigate(['/home']);
-            console.log('paso');
+      subscribe( res => { 
+            const data = res['token'];
+            if(data){
+              this.loginServ.setUser(res['user']);
+              this.loginServ.setToken(res['token']);
+              this.router.navigate(['/home']);
+              console.log(res);
           }else{
             this.router.navigate(['/login']);
-            console.log('no paso');
+            console.log(res);
           }
       })
 
