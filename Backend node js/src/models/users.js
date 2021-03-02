@@ -1,5 +1,5 @@
-const cors = require('cors');
-require('dotenv').config();
+// const cors = require('cors');
+// require('dotenv').config();
 const mysqlConnection = require('../config/database')
 
 const getAll = () => {
