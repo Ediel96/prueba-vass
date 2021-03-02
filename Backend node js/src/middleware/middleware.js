@@ -3,12 +3,13 @@ const moment = require('moment');
 const jwtSecret = require('../config/jwt')
 
 const checkToken = (req, res, next) =>{
-    if(!req.headers['user_token'])
+    console.log(req.body['token_user'])
+    if(!req.body['token_user'])
         return res.json({
             error: "Eso requierido el Headers"
         });
 
-        const token = req.headers['user_token'];
+        const token = req.body['token_user'];
         let payload  = null;
 
         try{

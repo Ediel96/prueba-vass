@@ -12,6 +12,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { EmployeeComponent } from './pages/home/employee/employee.component';
+import { EditComponent } from './pages/home/employee/edit/edit.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { EmployeeComponent } from './pages/home/employee/employee.component';
     LoginComponent,
     RegisterComponent,
     EmployeeComponent,
+    EditComponent,
   ],
   imports: [
     BrowserModule,

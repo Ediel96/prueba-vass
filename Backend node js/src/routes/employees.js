@@ -4,7 +4,7 @@ const mysqlConnection = require('../config/database')
 const middlewares = require('../middleware/middleware') 
 
 
-router.use(middlewares.checkToken);
+// router.use(middlewares.checkToken);
 
 router.get('/', (req, res) => {
     mysqlConnection.query('SELECT * FROM employees', (err, rows, fields) => {

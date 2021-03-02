@@ -13,6 +13,7 @@ const APP_ROUTES: Routes =[
     { 
         path: 'home', component: HomeComponent , canActivate: [AuthGuard], 
         children:[
+            {path: '', component : EmployeeComponent},
             {path: 'employee', component : EmployeeComponent}
         ]
     },

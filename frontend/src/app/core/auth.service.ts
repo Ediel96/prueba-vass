@@ -11,11 +11,12 @@ import { isNullOrUndefined } from 'util';
 export class AuthService {
 
   url = environment.urlHttp;
+
   private httpheader = new HttpHeaders ({
-        'Content-type' : 'application/json',
-        'Access-Control-Allow-Origin':'*',
-        }
-      );
+    'Content-type' : 'application/json',
+    'Access-Control-Allow-Origin':'*',
+    }
+  );
 
   constructor(private http: HttpClient) { }
 
